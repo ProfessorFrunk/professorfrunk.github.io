@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Star Trek Random Mission Report Generator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<link rel="stylesheet" type="text/css" href="assets/classic.css">
+    <script>
+        function getRandomRecordName() {
+            // List of records (can be any data you want)
+            const records = [
+				"USS Affinity",
+				"USS Agamemnon",
+				"USS Agostini",
+				"USS Ajax",
+				"USS Alcides",
+				"USS Aldebaran",
+				"USS Ambros",
+				"USS Ambush",
+				"USS Amity",
+				"USS Amur",
+				"USS Antares",
+				"USS Apollo",
+				"USS Aragon",
+				"USS Arcadia",
+				"USS Aries",
+				"USS Aspect",
+				"USS Atlanta",
+				"USS Atlantis",
+				"USS Atlas",
+				"USS Avenger",
+				"USS Baker",
+				"USS Baltimore",
+				"USS Bawendi",
+				"USS Beagle",
+				"USS Bedfordshire",
+				"USS Berkshire",
+				"USS Bertozzi",
+				"USS Bismarck",
+				"USS Boston",
+				"USS Bozeman",
+				"USS Bristol",
+				"USS Brus",
+				"USS Brutus",
+				"USS Buckinghamshire",
+				"USS Calisto",
+				"USS Cambria",
+				"USS Cambridgeshire",
+				"USS Captain's Pride",
+				"USS Cavalier",
+				"USS Ceres",
+				"USS Challenger",
+				"USS Charleston",
+				"USS Charon",
+				"USS Cheshire",
+				"USS Cheyenne",
+				"USS Clauser",
+				"USS Cochrane",
+				"USS Columbia",
+				"USS Concord",
+				"USS Congo",
+				"USS Conqueror",
+				"USS Conquest",
+				"USS Constellation",
+				"USS Copernicus",
+				"USS Cornwall",
+				"USS Corsair",
+				"USS Cortona",
+				"USS Corvus",
+				"USS Courageous",
+				"USS Cromwell",
+				"USS Cumberland",
+				"USS Cumbria",
+				"USS Daedalus",
+				"USS Delaware",
+				"USS Delphian",
+				"USS Derbyshire",
+				"USS Destrier",
+				"USS Devon",
+				"USS Discovery",
+				"USS Dorset",
+				"USS Drenthe",
+				"USS Dresden",
+				"USS Duncan",
+				"USS Durham",
+				"USS East Sussex",
+				"USS Eclipse",
+				"USS Eldridge",
+				"USS Endeavour",
+				"USS Essex",
+				"USS Everglade",
+				"USS Excalibur",
+				"USS Exeter",
+				"USS Farragut",
+				"USS Fearless",
+				"USS Fenrir",
+				"USS Flevoland",
+				"USS Fortitude",
+				"USS Friesland",
+				"USS Gagarin",
+				"USS Gage",
+				"USS Galileo",
+				"USS Gelderland",
+				"USS Gloucestershire",
+				"USS Gorgon",
+				"USS Grayling",
+				"USS Grayson",
+				"USS Greater London",
+				"USS Greater Manchester",
+				"USS Grissom",
+				"USS Groningen",
+				"USS Gryphon",
+				"USS Hampshire",
+				"USS Harmony",
+				"USS Hawking",
+				"USS Haymaker",
+				"USS Herefordshire",
+				"USS Hertfordshire",
+				"USS Hinton",
+				"USS Hood",
+				"USS Hopfield",
+				"USS Horatio",
+				"USS Horizon",
+				"USS Hornet",
+				"USS Houston",
+				"USS Huntingdonshire",
+				"USS Hyperion",
+				"USS Illustrious",
+				"USS Independence",
+				"USS Intrepid",
+				"USS Isle of Wight",
+				"USS Jupiter",
+				"USS Karikó",
+				"USS Kearsarge",
+				"USS Kent",
+				"USS Kingston",
+				"USS Kormak",
+				"USS Krausz",
+				"USS Kyoto",
+				"USS Lambert",
+				"USS Lancashire",
+				"USS Leicestershire",
+				"USS Lena",
+				"USS Leutze",
+				"USS Lexington",
+				"USS L'Huillier",
+				"USS Liberty",
+				"USS Limburg",
+				"USS Lincolnshire",
+				"USS Long Beach",
+				"USS Lyon",
+				"USS MacArthur",
+				"USS Madagascar",
+				"USS Majesty",
+				"USS Mars",
+				"USS Maxim",
+				"USS Meldal",
+				"USS Mercury",
+				"USS Merseyside",
+				"USS Middlesex",
+				"USS Minerva",
+				"USS New Jersey",
+				"USS New Orleans",
+				"USS Nile",
+				"USS Niobe",
+				"USS Nomad",
+				"USS Norfolk",
+				"USS North Brabant",
+				"USS North Holland",
+				"USS North Yorkshire",
+				"USS Northamptonshire",
+				"USS Northumberland",
+				"USS Nottinghamshire",
+				"USS Nova",
+				"USS Obsidian",
+				"USS Ocelot",
+				"USS Odyssey",
+				"USS Orion",
+				"USS Overijssel",
+				"USS Oxfordshire",
+				"USS Pääbo",
+				"USS Paladin",
+				"USS Pegasus",
+				"USS Perseus",
+				"USS Perseverance",
+				"USS Phoenix",
+				"USS Plymouth",
+				"USS Potemkin",
+				"USS Prometheus",
+				"USS Quest",
+				"USS Raven",
+				"USS Redoubt",
+				"USS Reliant",
+				"USS Repulse",
+				"USS Resilience",
+				"USS Resolute",
+				"USS Righteous",
+				"USS Royal",
+				"USS Rutland",
+				"USS Ruvkun",
+				"USS Saavik",
+				"USS Saladin",
+				"USS Saratoga",
+				"USS Scorpion",
+				"USS Sentinel",
+				"USS Sharpless",
+				"USS Shatner",
+				"USS Sheffield",
+				"USS Shepherd",
+				"USS Sheridan",
+				"USS Shran",
+				"USS Shropshire",
+				"USS Somerset",
+				"USS South Holland",
+				"USS South Yorkshire",
+				"USS Soval",
+				"USS Sphinx",
+				"USS Spock",
+				"USS Staffordshire",
+				"USS Starlight",
+				"USS Steadfast",
+				"USS Suffolk",
+				"USS Sunfire",
+				"USS Surak",
+				"USS Surrey",
+				"USS Surveyor",
+				"USS Sussex",
+				"USS Sutherland",
+				"USS Thames",
+				"USS Thunderchild",
+				"USS Ticonderoga",
+				"USS T'Pau",
+				"USS Tranquility",
+				"USS Trinidad",
+				"USS Triton",
+				"USS Triumphant",
+				"USS Tyne and Wear",
+				"USS Unbreakable",
+				"USS Utrecht",
+				"USS Valhalla",
+				"USS Valiant",
+				"USS Valor",
+				"USS Vancouver",
+				"USS Vanguard",
+				"USS Victory",
+				"USS Vigilant",
+				"USS Warhawk",
+				"USS Warwickshire",
+				"USS Weissman",
+				"USS West Midlands",
+				"USS West Sussex",
+				"USS West Yorkshire",
+				"USS Westmorland",
+				"USS Williams",
+				"USS Wiltshire",
+				"USS Worcestershire",
+				"USS Yamato",
+				"USS Yekimov",
+				"USS Yenisei",
+				"USS Yorkshire",
+				"USS Yorktown",
+				"USS Zeeland",
+				"USS Zeilinger",
+				"USS Zulu"
+
+            ];
+
+            // Generate a random index based on the length of the list
+            const randomIndex = Math.floor(Math.random() * records.length);
+
+			// Set the minimum and maximum range
+            const min = 62000;
+            const max = 77000;
+
+            // Generate a random number in the range [min, max]
+            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            // Fixed text string
+            const fixedText1 = " (NCC-";
+			const fixedText2 = ")"
+
+            // Concatenate the fixed text and the random record
+            const resultText = records[randomIndex] + fixedText1 + randomNumber + fixedText2;
+			
+			// Display the result
+            document.getElementById('resultName').innerText = resultText;
+			
+        }
+    </script>
+    <script>
+				function getRandomRecordClass() {
+					// List of records (can be any data you want)
+					const records = [
+						"Akira-class",
+						"Ambassador-class",
+						"Atlas-class",
+						"Busan-class",
+						"California-class",
+						"Centaur-class",
+						"Ceres-class",
+						"Challenger-class",
+						"Cheyenne-class",
+						"Cleveland-class",
+						"Cochrane-class",
+						"Constitution-class",
+						"Danube-class",
+						"Discovery-class",
+						"Excelsior-class",
+						"Gagarin-class",
+						"Intrepid-class",
+						"Jupiter-class",
+						"Luna-class",
+						"Mars-class",
+						"Merian-class",
+						"Miranda-class",
+						"Nebula-class",
+						"Neptune-class",
+						"New Orleans-class",
+						"Nova-class",
+						"Oberth-class",
+						"Peregrine-class",
+						"Phoenix-class",
+						"Prometheus-class",
+						"Proxima-class",
+						"Ptolemy-class",
+						"Revere-class",
+						"Saratoga-class",
+						"Shenzhou-class",
+						"Steamrunner-class",
+						"Sutherland-class",
+						"Sydney-class",
+						"Tokyo-class",
+						"Yellowstone-class"
+
+
+					];
+
+					// Generate a random index based on the length of the list
+					const randomIndex2 = Math.floor(Math.random() * records.length);
+
+					// Display the random record in the 'result' element
+					document.getElementById('resultClass').innerText = records[randomIndex2];
+					
+				}
+    </script>
+    <script>
+		function generateRandomNumberSD() {
+			// Set the minimum and maximum range
+			const min = 42000;
+			const max = 52999;
+
+			// Generate a random number in the range [min, max]
+			const randomNumber = Math.random() * (max - min) + min;
+
+			// Format the number to 1 decimal place
+			const formattedNum = randomNumber.toFixed(1);
+
+			// Display the result
+			document.getElementById('resultSD').innerText = formattedNum;
+		}
+    </script>
+    <script>
+        
+		
+		function getRandomRecordMission() {
+            // List of records (can be any data you want)
+            const list1 = [
+				"Acamar III",
+				"Aldebaran III",
+				"Alidar II",
+				"Almath",
+				"Alpha Capella III",
+				"Alpha Centauri B2",
+				"Alpha Omega V",
+				"Alpha Omicron IV",
+				"Altair IV",
+				"Andoria",
+				"Arda II",
+				"Argelius II",
+				"Atlatia",
+				"Atoria IV",
+				"Azati Prime",
+				"Bajor",
+				"Banea",
+				"Barzan II",
+				"Berengaria VII",
+				"Beta Antares IV",
+				"Beta III",
+				"Betazed",
+				"Betelgeuse V",
+				"Cardassia Prime",
+				"Caron V",
+				"Carthen IV",
+				"Cestus III",
+				"Ceti Alpha V",
+				"Chaltok IV",
+				"Chandrila",
+				"Chorgar",
+				"Concordia IV",
+				"Coridan",
+				"Dalratha",
+				"Deep Space 3",
+				"Deep Space 5",
+				"Deep Space 9",
+				"Delta IV",
+				"Delta V",
+				"Deneb IV",
+				"Deneva",
+				"Denobula",
+				"Devos II",
+				"Draylon II",
+				"Dunar",
+				"Earth",
+				"Epsilon Canaris III",
+				"Excalbia",
+				"Exo III",
+				"Farius Prime",
+				"Faron",
+				"Fendi IV",
+				"Fendora",
+				"Ferenginar",
+				"Gamma Hydra IV",
+				"Gamma Trianguli VI",
+				"Gliese 581d",
+				"Gliese 581g",
+				"Gornar",
+				"Hades Gamma",
+				"Halkan Council",
+				"Harrit 4",
+				"Harvaan II",
+				"Hikaru",
+				"Horta Homeworld",
+				"Iadara",
+				"Iconia",
+				"Illyria",
+				"Imladris",
+				"Imzadi IV",
+				"Iota Beta IV",
+				"Iota Geminorum IV",
+				"J’Gal",
+				"Jamar",
+				"Karana",
+				"Kiron IV",
+				"Korma IV",
+				"Krios Prime",
+				"Ligon II",
+				"Luna",
+				"Luran III",
+				"Lurian",
+				"M-113",
+				"Mab Bua",
+				"Malcor III",
+				"Mars",
+				"Marva",
+				"Melona IV",
+				"Mogaru",
+				"Morn’s Homeworld",
+				"Morska",
+				"Murasaki 312",
+				"Nerada",
+				"Nevarra",
+				"Nibiru",
+				"Nibiru Prime",
+				"Nimbus III",
+				"Nyla III",
+				"Omega IV",
+				"Omicron Theta",
+				"Orellius III",
+				"Organia",
+				"Orias III",
+				"Orion",
+				"P’Jem",
+				"Penthara IV",
+				"Persephone V",
+				"Phyrexia",
+				"Proxima Station",
+				"Qo'noS",
+				"Radosl",
+				"Rakosa V",
+				"Remus",
+				"Rhaandar",
+				"Rigel IV",
+				"Rigel VII",
+				"Risa",
+				"Romulus",
+				"Ruripenti",
+				"Sarpeidon",
+				"Shaddam IV",
+				"Shiralea V",
+				"Sigma Iotia II",
+				"Sirius IV",
+				"Solon",
+				"Starbase 101",
+				"Starbase 105",
+				"Starbase 11",
+				"Starbase 118",
+				"Starbase 12",
+				"Starbase 122",
+				"Starbase 124",
+				"Starbase 129",
+				"Starbase 13",
+				"Starbase 130",
+				"Starbase 138",
+				"Starbase 14",
+				"Starbase 140",
+				"Starbase 143",
+				"Starbase 148",
+				"Starbase 149",
+				"Starbase 150",
+				"Starbase 160",
+				"Starbase 161",
+				"Starbase 166",
+				"Starbase 167",
+				"Starbase 170",
+				"Starbase 171",
+				"Starbase 175",
+				"Starbase 178",
+				"Starbase 188",
+				"Starbase 19",
+				"Starbase 190",
+				"Starbase 197",
+				"Starbase 202",
+				"Starbase 211",
+				"Starbase 235",
+				"Starbase 240",
+				"Starbase 242",
+				"Starbase 246",
+				"Starbase 247",
+				"Starbase 255",
+				"Starbase 263",
+				"Starbase 264",
+				"Starbase 269",
+				"Starbase 270",
+				"Starbase 271",
+				"Starbase 273",
+				"Starbase 278",
+				"Starbase 28",
+				"Starbase 291",
+				"Starbase 292",
+				"Starbase 3",
+				"Starbase 305",
+				"Starbase 314",
+				"Starbase 326",
+				"Starbase 327",
+				"Starbase 331",
+				"Starbase 336",
+				"Starbase 338",
+				"Starbase 339",
+				"Starbase 340",
+				"Starbase 345",
+				"Starbase 353",
+				"Starbase 375",
+				"Starbase 388",
+				"Starbase 391",
+				"Starbase 393",
+				"Starbase 395",
+				"Starbase 397",
+				"Starbase 47",
+				"Starbase 5",
+				"Starbase 53",
+				"Starbase 70",
+				"Starbase 80",
+				"Starbase 83",
+				"Starbase 86",
+				"Starbase 90",
+				"Strana III",
+				"Surata IV",
+				"Talos IV",
+				"Tau Alpha C",
+				"Tellar",
+				"The Badlands",
+				"Titan",
+				"Torma IV",
+				"Torma V",
+				"Torma VI",
+				"Tormas VII",
+				"Trill",
+				"Tyrellia",
+				"Uxmal IV",
+				"Valtor",
+				"Veridian III",
+				"Vilon IV",
+				"Viroth V",
+				"Vulcan",
+				"Wrigley’s Pleasure Planet",
+				"Xindus",
+				"Yadera Prime",
+				"Zataran IV",
+				"Zegema Beach",
+				"Zenon IV",
+				"Zeta Alpha",
+				"Ziemis"
+
+            ];
+			
+			const list2 = [
+			"to deliver a consignment of Bajoran spring wine",
+			"to deliver a consignment of Klingon blood wine",
+			"for a frieght run (super chill, right?)",
+			"for a resupply mission for a new colony",
+			"for a second contact mission",
+			"for a shakedown cruise",
+			"for a training mission with the rowdy bunch from the Academy",
+			"for another Red Squad adventure!",
+			"for our maiden voyage!",
+			"for patrol duty near the Romulan neutral zone",
+			"for repairs",
+			"for shore leave",
+			"to answer a distress call",
+			"to attend a medical conference at a luxury resort, naturally",
+			"to attend the Parrises squares tournament (go sports!)",
+			"to conduct industrial replicator delivery (next day shipping)",
+			"to deal with Nausican raiders",
+			"to deliver 10,000 wrappages of yammock sauce",
+			"to deliver 20 gross of stem bolts",
+			"to deliver some cool diplomatic gifts!",
+			"to deliver terraforming supplies",
+			"to escort some Cadets on a field trip",
+			"to host a diplomatic event onboard, open bar!",
+			"to host a Velocity tournament onboard!",
+			"to particpate in a mission race!",
+			"to refit the ship with a new warp core",
+			"to repair a subspace relay satellite",
+			"to repair a subspace telescope",
+			"to transport a prisoner (ethics dilemma episode)",
+			"to transport negotiators to a peace conference",
+			"to transport new cadets to the Academy",
+			"to transport supplies to the Enterprise",
+			"to transport the Federation ambassador to negotiations"
+
+			]
+
+
+            // Get random index for the first list
+            const randomIndex1 = Math.floor(Math.random() * list1.length);
+            
+            // Get random index for the second list
+            const randomIndex2 = Math.floor(Math.random() * list2.length);
+
+            // Fixed text string
+            const fixedText3 = "En-route to ";
+
+            // Get random items from both lists
+            const randomItem1 = list1[randomIndex1];
+            const randomItem2 = list2[randomIndex2];
+            
+            // Concatenate the two random items
+            const resultTextMission = fixedText3 + randomItem1 + " " + randomItem2;
+
+            // Display the result
+            document.getElementById('resultMission').innerText = resultTextMission;
+			
+        }
+    </script>
+	
+    <script>
+        function getRandomRecordResult() {
+            // List of records (can be any data you want)
+            const records = [
+				"100 bars of gold pressed latinum!",
+				"A grand day out lad!",
+				"A nice time was had by all",
+				"A night in sickbay",
+				"A trio of drunk Betazoid dignitaries cause some mischief",
+				"Accidently became God to a tribe of proto-Vulcans",
+				"Accidently introduced global warming to Andoria",
+				"Acquired a case of Bloodwine, 2309, a very good year!",
+				"All crew abandon ship!",
+				"All they have is 3 day old gagh!",
+				"Another banging recital!",
+				"Another mirror universe adventure!",
+				"Another rogue Soong-type android causes all sorts of headaches",
+				"Assimilated by the Borg",
+				"Away team captured, added to an alien zoo, decide to stay",
+				"Boooooring!",
+				"Broke the prime directive… again!",
+				"Cadets rebel, gone Lord of the Flies in here",
+				"Captain and CMO sent to Rura Penthe for life",
+				"Captain and helmsman turned into salamanders, start a family",
+				"Captain, drop the shields!",
+				"Captured trying to infiltrate a Maquis cell",
+				"Changeling infiltrators do our jobs better than us…",
+				"Chasing the Maquis through the Badlands",
+				"Chu Chu Dance!",
+				"Computer, end program",
+				"Crashed into a star (whoops!)",
+				"Crew won two weeks all inclusive on Risa!",
+				"Crew won two weeks all inclusive to Bozeman, Montana!",
+				"Crystalline entity attacks!",
+				"Dabo!",
+				"Delivered a bunch of Gorn babies (watch out, they bite!)",
+				"Demoted and sent back the academy",
+				"Detected an approaching vessel, described as 'cubed shaped'",
+				"Discovered a sentient species of wee turtles",
+				"Duck blind mission gone wrong!",
+				"Eaten by the Gorn",
+				"Ended up with a bunch of Borg kids onboard for some reason",
+				"Engage!",
+				"Engaged the core!",
+				"Everyone just needs to calm down!",
+				"Evicted settlers due to the new treaty, very not chill",
+				"Evil transporter clones get up to mischief",
+				"Faster than a Romulan interceptor by two-tenths of a warp factor",
+				"First contact with some like really cool dudes",
+				"Fly her apart dammit!",
+				"Found a lost Earth colony from the 1970s, disco!",
+				"Found a mirror universe even nicer than ours!",
+				"Found a sentient coffee nebula!",
+				"Found another Armus",
+				"Found the Sword of Khaless",
+				"Go away Q!",
+				"Goo!",
+				"Got the phage because we didn't wash our hands",
+				"Had a delightful evening at Vic's Lounge",
+				"Have to retake the shuttle licence, lets not talk about it",
+				"Holodeck adventure in the Old West!",
+				"Holodeck safeties are offline…",
+				"Ice cream party!",
+				"Inertial damper failure, crew now 20% shorter",
+				"Interstellar war! (but we've got new darts coming next week)",
+				"Is that… Zefram Cochrane?",
+				"Is this New York? No, its Toronto",
+				"It is revolting, more please!",
+				"It melted the carpet! Well that's what they breath!",
+				"Joined the House of Martok",
+				"Kal-toh!",
+				"Khaaaaaaaaaaaaaaaan!",
+				"Kobyashi Maru!",
+				"Liberated an oppressed minority (court-martial pending)",
+				"Like, really bad sunburn",
+				"Live long and prosper!",
+				"Logical as a mother****er!",
+				"Lost Admiral Archer's prize beagle in a transporter demonstration",
+				"Lower decks! Lower decks! Lower decks!",
+				"Lwaxana Troi marries the chief engineer for some reason",
+				"Oh no, the Enterprise-C has time travelled again!",
+				"One of the crew found a cool rock",
+				"Out-negotiated the Ferengi",
+				"Peace negotiations, with cake at the reception",
+				"Promotion ceremony!",
+				"Proved the Yridians weren't extinct",
+				"PSI-2000 virus",
+				"Punch it up to Warp 9!",
+				"Quaaaaark!",
+				"Retrieved another two whales from 1980s San Francisco",
+				"Revenge plot #47",
+				"Riker maneuver (you know the one)",
+				"Saved a colony from an asteroid, but it got hit by a second asteroid",
+				"Saved another freighter from a gas-giant, issued citation",
+				"Saw some space whales, neat!",
+				"Self destruct in 5….",
+				"Sent 900 years into the future for some reason",
+				"Sent to the Delta Quadrant by, lets say, a Horgon",
+				"Sexy space ghost adventure",
+				"Ship and crew captured by Orions",
+				"Ship stolen, possibly kids taking it for a joy ride",
+				"Ship turned into an alien temple",
+				"Ship went 'all Sovereign'",
+				"Snooze-fest",
+				"Some sort of galaxy ending threat, lets say… space… mushrooms? I dunno",
+				"Some sort of Romulan neutral zone shenanigans",
+				"Spilt raktajino on the engineering panel, accidently ejected the warp core",
+				"Spring break!",
+				"Stalked by a Hirogen hunting party",
+				"Stealing a ship right out of Spacedock",
+				"Still an ensign...",
+				"Successful duck blind mission",
+				"Surfing those gravity waves dude!",
+				"Swindled out of the warp core by the Ferengi",
+				"Synthales all round!",
+				"Teaching alien women to love!",
+				"The river provides!",
+				"There's still a tendril up your nose",
+				"They have a Quarks here!",
+				"Tholians are at it again",
+				"Those pesky Iconians",
+				"Time anomaly turned the crew into monkeys",
+				"Tough little ship",
+				"Transport clones solves manpower issues",
+				"Transporter accident, 4 crew now babies",
+				"Tried Neelix's cookbook, things went bad",
+				"Unintentionally added another member to the Federation",
+				"Warp me!",
+				"Watch out, here comes the Augments!",
+				"Wedding! I said I wouldn't cry…",
+				"Who could do that to the Borg?"
+
+
+
+            ];
+
+            // Generate a random index based on the length of the list
+            const randomIndex5 = Math.floor(Math.random() * records.length);
+
+            // Display the random record in the 'result' element
+            document.getElementById('resultMissonReport').innerText = records[randomIndex5];
+			
+        }
+    </script>
+</head>
+<body>
+	<section class="wrap-standard" id="column-3">
+			<div class="right-frame">
+				<div class="lcars-text-bar">
+					<span>mission report</span>
+				</div>
+				<main>
+					<!-- Start your content here. -->
+					<h3>Get your random Star Trek mission report here - billions of combinations. Engage!</h3>	
+					<div class="buttons jc-center">
+						<a onclick="getRandomRecordName(),getRandomRecordClass(),generateRandomNumberSD(),getRandomRecordMission(),getRandomRecordResult()">search</a>
+					</div>					
+					<div class="flexbox">
+						<div class="col">
+						  <h1>Starship</h1>
+						  <h1>Class</h1>
+						  <h1>Stardate</h1>
+						  <h1>Mission</h1>
+						  <h1>Mission Report</h1>
+						</div>
+						<div class="col">
+						  <h1 class="font-space-white" id="resultName"></h1>
+						  <h1 class="font-space-white" id="resultClass"></h1>
+						  <h1 class="font-space-white" id="resultSD"></h1>
+						  <h1 class="font-space-white" id="resultMission"></h1>
+						  <h1 class="font-space-white" id="resultMissonReport"></h1>
+						</div>
+					</div>
+	
+					<!-- End content area. -->
+				 <footer>
+				 	<div>
+						<!-- Your copyright information is only a suggestion. You can also choose to delete this DIV. -->
+						Content Copyright &#169; 2025 by ProfessorFrunk
+					</div>
+					<div>
+						<!-- The following attribution must not be removed. -->
+						STAR TREK &#169; and related marks are trademarks of CBS Studios Inc. All rights reserved
+					</div>					
+					<div>
+						<!-- The following attribution must not be removed. -->
+						LCARS Inspired Website Template created by and copyright &#169; <a href="https://www.thelcars.com">www.TheLCARS.com</a>, with modifications
+					</div>
+				</footer> 
+			</div>
+	</section>	
+	<script type="text/javascript" src="assets/lcars.js"></script>
+	<div class="headtrim"> </div>
+	<div class="baseboard"> </div>
+</body>
+</html>
