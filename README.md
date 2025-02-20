@@ -1,4 +1,4 @@
-Simple website for creating random Star Trek mission reports, using an LCARS like theme
+Simple website for creating random Star Trek mission reports, using an LCARS like theme - https://startrekrandommissionreportgenerator.com/
 
 v1.0
 - Initial deployment
