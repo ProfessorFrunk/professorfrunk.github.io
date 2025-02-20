@@ -5,7 +5,7 @@ v1.0
 - Desktop ready, not optimised for mobile devices
 
 V1.1
-- Big content update for ship names and ship classes
+- Content update for ship names and ship classes
 
 V1.2
 - Adsense banner integrated
