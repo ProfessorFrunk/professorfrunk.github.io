@@ -6,4 +6,9 @@ v1.0
 
 V1.1
 - Big content update for ship names and ship classes
+
+V1.2
 - Adsense banner integrated
+
+V1.3
+- Content update for all components
