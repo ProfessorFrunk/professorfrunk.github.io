@@ -2567,9 +2567,10 @@ footer div {
 	}
 	
 	.small-divider {
-    width: 50px;
-    height: 5px;
+    width: 100px;
+    height: 3px;
     background-color: black;
     border: none;
+    margin: 20px auto;
 	}
 }
