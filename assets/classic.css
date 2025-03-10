@@ -2565,4 +2565,11 @@ footer div {
 	.hop	{
 		display: none;
 	}
+	
+	.small-divider {
+    width: 50px;
+    height: 5px;
+    background-color: black;
+    border: none;
+	}
 }
