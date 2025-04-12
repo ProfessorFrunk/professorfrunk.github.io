@@ -1756,6 +1756,16 @@
 					
 					<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
 					
+					<style>
+					  /* Apply Antonio font to the cookie consent popup */
+					  .cc-window, 
+					  .cc-window p, 
+					  .cc-window a, 
+					  .cc-window button {
+						font-family: 'Antonio', sans-serif !important;
+					  }
+					</style>
+					
 					<script>
 					  window.addEventListener("load", function(){
 						window.cookieconsent.initialise({
@@ -1769,22 +1779,10 @@
 							dismiss: "Got it!",
 							link: "Learn more",
 							href: "/privacy-policy"
-						  },
-						  onInitialise: function() {
-							// Apply the Antonio font to the popup text with !important
-							const popup = document.querySelector('.cc-window');
-							if (popup) {
-							  const popupText = popup.querySelectorAll('p, a, button');
-							  popupText.forEach(element => {
-								element.style.fontFamily = "'Antonio', sans-serif !important";
-							  });
-							}
 						  }
 						})
 					  });
 					</script>
-
-
 				
 					<div style="height: 20px;"></div>
 					
