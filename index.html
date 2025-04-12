@@ -1771,16 +1771,19 @@
 							href: "/privacy-policy"
 						  },
 						  onInitialise: function() {
-							// Apply the Antonio font to the popup text
+							// Apply the Antonio font to the popup text with !important
 							const popup = document.querySelector('.cc-window');
-							const popupText = popup.querySelectorAll('p, a, button');
-							popupText.forEach(element => {
-							  element.style.fontFamily = "'Antonio', sans-serif";
-							});
+							if (popup) {
+							  const popupText = popup.querySelectorAll('p, a, button');
+							  popupText.forEach(element => {
+								element.style.fontFamily = "'Antonio', sans-serif !important";
+							  });
+							}
 						  }
 						})
 					  });
 					</script>
+
 
 				
 					<div style="height: 20px;"></div>
