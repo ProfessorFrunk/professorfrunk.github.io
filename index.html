@@ -1755,6 +1755,7 @@
 					</script>
 					
 					<script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+					
 					<script>
 					  window.addEventListener("load", function(){
 						window.cookieconsent.initialise({
@@ -1768,6 +1769,14 @@
 							dismiss: "Got it!",
 							link: "Learn more",
 							href: "/privacy-policy"
+						  },
+						  onInitialise: function() {
+							// Apply the Antonio font to the popup text
+							const popup = document.querySelector('.cc-window');
+							const popupText = popup.querySelectorAll('p, a, button');
+							popupText.forEach(element => {
+							  element.style.fontFamily = "'Antonio', sans-serif";
+							});
 						  }
 						})
 					  });
