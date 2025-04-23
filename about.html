@@ -73,6 +73,24 @@
 			<h1>Why We Do This</h1>
 			<p>We’re passionate about the Star Trek universe and wanted to create something that gives fans an interactive experience. We hope that it sparks creativity and brings joy to fans of all ages.</p>
 		  </div>
+		  
+		  			<script>
+					  window.addEventListener("load", function(){
+						window.cookieconsent.initialise({
+						  palette: {
+							popup: { background: "#000" },
+							button: { background: "#ffaa44" }
+						  },
+						  theme: "classic",
+						  content: {
+							message: "This website uses cookies to ensure you get the best experience.",
+							dismiss: "Got it!",
+							link: "Learn more",
+							href: "/privacy-policy"
+						  }
+						})
+					  });
+					</script>
 
 		  <footer>
 			<p>&copy; 2025 Star Trek Random Mission Report Generator</p>
