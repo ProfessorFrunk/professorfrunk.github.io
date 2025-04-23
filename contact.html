@@ -2,27 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" type="text/css" href="assets/classic.css">
   <title>Contact Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">
   <style>
-    body {
+	body {
       font-family: 'Antonio', sans-serif;
       margin: 0;
       padding: 20px;
-      background: #f4f4f4;
-      color: #333;
+      background: #0b0c10;
+      color: #ffaa44;
     }
 
     header {
       background: #0b0c10;
-      color: #fff;
+      color: #ffaa44;
       padding: 1em 0;
       text-align: center;
     }
 
     nav a {
-      color: #66fcf1;
+      color: #ff4400;
       margin: 0 15px;
       text-decoration: none;
     }
@@ -36,43 +38,25 @@
       margin-top: 40px;
       font-size: 0.9em;
       text-align: center;
-      color: #888;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: #0b0c10;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    form button:hover {
-      background: #45a29e;
+      color: #c9f;
     }
   </style>
 </head>
 <body>
+	<section class="wrap-standard" id="column-3">
+	<div class="right-frame">
   <header>
-    <h1>Contact Us</h1>
-    <nav>
-      <a href="/about">About</a>
-      <a href="/privacy-policy">Privacy Policy</a>
-      <a href="/contact">Contact</a>
-    </nav>
+    <h3>Contact Us</h3>
+			<div class="buttons jc-space-evenly">
+			  <a href="index.html">Home</a> <!-- Link to the main index page -->
+			  <a href="about.html">About</a>
+			  <a href="privacy-policy.html">Privacy Policy</a>
+			  <a href="contact.html">Contact</a>
+			</div>
   </header>
 
   <div class="content">
-    <h2>Get in Touch</h2>
+    <h1>Get in Touch</h1>
     <p>If you have any questions, suggestions, or feedback, we’d love to hear from you. Use the form below to contact us.</p>
 
     <form action="/submit-contact" method="POST">
@@ -89,8 +73,10 @@
     </form>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Star Trek Random Mission Report Generator</p>
-  </footer>
+		  <footer>
+			<p>&copy; 2025 Star Trek Random Mission Report Generator</p>
+			<p>STAR TREK &#169; and related marks are trademarks of CBS Studios Inc. All rights reserved</p>
+			<p>LCARS Inspired Website Template created by and copyright &#169; <a href="https://www.thelcars.com">www.TheLCARS.com</a>, with modifications</p>
+		  </footer>
 </body>
 </html>
