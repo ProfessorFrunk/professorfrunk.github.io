@@ -12,3 +12,6 @@ V1.2
 
 V1.3
 - Content update for all components
+
+V1.4
+- Added 'about', 'privacy policy' and 'contact us' pages
