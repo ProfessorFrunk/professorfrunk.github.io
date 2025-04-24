@@ -15,3 +15,6 @@ V1.3
 
 V1.4
 - Added 'about', 'privacy policy' and 'contact us' pages
+
+V1.5
+- Added a 'support me' link to Ko-fi
